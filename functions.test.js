@@ -48,13 +48,26 @@ test('Admin should be in usernames ', ()=> {
 });
 
 // working with async data
-test('User fetched name should be Leanne Graham', ()=> {
-  // Verifies that .then of promise is called
-  expect.assertions(1);
-  // Return the promise or test will complete before promise is complete
-  return functions.fetchUser()
-    .then(data => {
-      expect(data.name).toEqual('Leanne Graham');
-    })
-    .catch(err=> 'error');
+// // promie
+// test('User fetched name should be Leanne Graham', ()=> {
+//   // Verifies that .then of promise is called
+//   expect.assertions(1);
+//   // Return the promise or test will complete before promise is complete
+//   return functions.fetchUser()
+//     .then(data => {
+//       expect(data.name).toEqual('Leanne Graham');
+//     })
+//     .catch(err=> 'error');
+// });
+
+// Async/await
+test('User fetched name should be Leanne Graham', async ()=> {
+  try {
+    // Verifies that .then of promise is called
+    expect.assertions(1);
+    const data = await functions.fetchUser();
+    expect(data.name).toEqual('Leanne Graham');
+  } catch (error) {
+    console.error(error)
+  }
 });
