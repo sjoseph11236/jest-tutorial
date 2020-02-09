@@ -46,3 +46,8 @@ test('Admin should be in usernames ', ()=> {
   const usernames = ['john', 'karen', 'admin'];
   expect(usernames).toContain('admin');
 });
+
+// working with async data
+test('User fetched name should be Leanne Graham', ()=> {
+  expect.assertions(1);
+});
