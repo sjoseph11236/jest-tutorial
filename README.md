@@ -11,3 +11,4 @@ I am learning the basic of jest testing.
 
 
 ### sources:
+[Travesy Media Jest Tutorial](https://www.youtube.com/watch?v=7r4xVDI2vho&t=130s)
